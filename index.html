@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>oclime.com — Residential Real Estate Appraisals, Orange County CA</title>
+<meta name="description" content="Residential real estate appraisals serving Orange County, California. Book an appointment and reach us by email.">
+
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Decorative background: stylized cartogram of Orange County cities -->
+<div class="oc-map-bg" aria-hidden="true">
+  <svg viewBox="0 0 970 970" xmlns="http://www.w3.org/2000/svg">
+    <!-- Row 1 (north) -->
+    <rect class="city-cell" style="fill:var(--tint-butter)"   x="40"  y="40"  width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-sky)"      x="220" y="40"  width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-mint)"     x="400" y="40"  width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-peach)"    x="580" y="40"  width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-blush)"    x="760" y="40"  width="170" height="170" rx="30"/>
+    <!-- Row 2 -->
+    <rect class="city-cell" style="fill:var(--tint-lavender)" x="40"  y="220" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-blush)"    x="220" y="220" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-butter)"   x="400" y="220" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-lavender)" x="580" y="220" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-mint)"     x="760" y="220" width="170" height="170" rx="30"/>
+    <!-- Row 3 (middle row — Irvine sits center) -->
+    <rect class="city-cell" style="fill:var(--tint-sky)"      x="40"  y="400" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-mint)"     x="220" y="400" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-peach)"    x="400" y="400" width="170" height="170" rx="34"/>
+    <rect class="city-cell" style="fill:var(--tint-sky)"      x="580" y="400" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-butter)"   x="760" y="400" width="170" height="170" rx="30"/>
+    <!-- Row 4 -->
+    <rect class="city-cell" style="fill:var(--tint-blush)"    x="40"  y="580" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-lavender)" x="220" y="580" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-mint)"     x="400" y="580" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-butter)"   x="580" y="580" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-peach)"    x="760" y="580" width="170" height="170" rx="30"/>
+    <!-- Row 5 (south) -->
+    <rect class="city-cell" style="fill:var(--tint-peach)"    x="40"  y="760" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-butter)"   x="220" y="760" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-sky)"      x="400" y="760" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-blush)"    x="580" y="760" width="170" height="170" rx="30"/>
+    <rect class="city-cell" style="fill:var(--tint-lavender)" x="760" y="760" width="170" height="170" rx="30"/>
+
+    <!-- Labels: Row 1 -->
+    <text class="city-label" x="125" y="130" text-anchor="middle" font-size="14">Brea</text>
+    <text class="city-label" x="305" y="130" text-anchor="middle" font-size="14">Fullerton</text>
+    <text class="city-label" x="485" y="130" text-anchor="middle" font-size="14">Anaheim</text>
+    <text class="city-label" x="665" y="130" text-anchor="middle" font-size="14">Orange</text>
+    <text class="city-label" x="845" y="122" text-anchor="middle" font-size="13">Villa</text>
+    <text class="city-label" x="845" y="138" text-anchor="middle" font-size="13">Park</text>
+
+    <!-- Row 2 -->
+    <text class="city-label" x="125" y="303" text-anchor="middle" font-size="13">Yorba Linda</text>
+    <text class="city-label" x="305" y="303" text-anchor="middle" font-size="13">Placentia</text>
+    <text class="city-label" x="485" y="295" text-anchor="middle" font-size="13">North</text>
+    <text class="city-label" x="485" y="311" text-anchor="middle" font-size="13">Tustin</text>
+    <text class="city-label" x="665" y="295" text-anchor="middle" font-size="12">Orange Park</text>
+    <text class="city-label" x="665" y="311" text-anchor="middle" font-size="12">Acres</text>
+    <text class="city-label" x="845" y="295" text-anchor="middle" font-size="12">Anaheim</text>
+    <text class="city-label" x="845" y="311" text-anchor="middle" font-size="12">Hills</text>
+
+    <!-- Row 3 -->
+    <text class="city-label" x="125" y="490" text-anchor="middle" font-size="14">Westminster</text>
+    <text class="city-label" x="305" y="490" text-anchor="middle" font-size="14">Santa Ana</text>
+    <text class="city-label" x="485" y="493" text-anchor="middle" font-size="17" font-weight="700">Irvine</text>
+    <text class="city-label" x="665" y="490" text-anchor="middle" font-size="14">Tustin</text>
+    <text class="city-label" x="845" y="482" text-anchor="middle" font-size="13">Lake</text>
+    <text class="city-label" x="845" y="498" text-anchor="middle" font-size="13">Forest</text>
+
+    <!-- Row 4 -->
+    <text class="city-label" x="125" y="662" text-anchor="middle" font-size="12">Huntington</text>
+    <text class="city-label" x="125" y="678" text-anchor="middle" font-size="12">Beach</text>
+    <text class="city-label" x="305" y="670" text-anchor="middle" font-size="13">Costa Mesa</text>
+    <text class="city-label" x="485" y="670" text-anchor="middle" font-size="13">Newport Beach</text>
+    <text class="city-label" x="665" y="662" text-anchor="middle" font-size="12">Laguna</text>
+    <text class="city-label" x="665" y="678" text-anchor="middle" font-size="12">Woods</text>
+    <text class="city-label" x="845" y="662" text-anchor="middle" font-size="12">Laguna</text>
+    <text class="city-label" x="845" y="678" text-anchor="middle" font-size="12">Hills</text>
+
+    <!-- Row 5 -->
+    <text class="city-label" x="125" y="842" text-anchor="middle" font-size="12">Sunset</text>
+    <text class="city-label" x="125" y="858" text-anchor="middle" font-size="12">Beach</text>
+    <text class="city-label" x="305" y="842" text-anchor="middle" font-size="12">Newport</text>
+    <text class="city-label" x="305" y="858" text-anchor="middle" font-size="12">Coast</text>
+    <text class="city-label" x="485" y="850" text-anchor="middle" font-size="13">Laguna Beach</text>
+    <text class="city-label" x="665" y="842" text-anchor="middle" font-size="12">Aliso</text>
+    <text class="city-label" x="665" y="858" text-anchor="middle" font-size="12">Viejo</text>
+    <text class="city-label" x="845" y="842" text-anchor="middle" font-size="12">Mission</text>
+    <text class="city-label" x="845" y="858" text-anchor="middle" font-size="12">Viejo</text>
+  </svg>
+</div>
+
+<!-- Top bar -->
+<header class="topbar">
+  <div class="topbar-brand">
+    <img src="assets/logo-icon.png" alt="oclime.com lime icon">
+    <span>oclime.com</span>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <img class="hero-logo" src="assets/logo.png" alt="oclime.com — a lime slice mark">
+  <h1>Residential Real Estate <span class="accent">Appraisals</span><br>Serving Orange County, California</h1>
+  <p class="lede">Valuations for homes across Orange County, California.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#calendar">Check availability</a>
+    <a class="btn btn-ghost" href="#contact">Contact us</a>
+  </div>
+</section>
+
+<!-- Panels: Work Calendar (wide) + Date&Time / Task-Appointments (narrow stack) -->
+<section class="panels" id="calendar">
+
+  <!-- Live Calendar -->
+  <div class="panel panel-calendar" aria-labelledby="calendar-title">
+    <div class="panel-head">
+      <h2 id="calendar-title">Work Calendar</h2>
+      <span class="panel-dot" aria-hidden="true"></span>
+    </div>
+    <div class="panel-body calendar-embed-wrap">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=benocappraiser%40gmail.com&ctz=America%2FLos_Angeles&mode=MONTH&showTitle=0&showNav=0&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&bgcolor=%23FFFFFF&color=%237CB928"
+        title="Live Google Calendar — current month">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Narrow right-hand stack -->
+  <div class="side-stack">
+
+    <!-- Date & Time -->
+    <div class="panel panel-narrow panel-headless" aria-label="Current date and time">
+      <div class="panel-body">
+        <div class="datetime">
+          <div class="time" id="js-time">--:--:--</div>
+          <div class="date" id="js-date">Loading…</div>
+          <div class="tz">Pacific Time · Orange County</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task-Appointments -->
+    <div class="panel panel-narrow" aria-labelledby="task-appt-title">
+      <div class="panel-head">
+        <h2 id="task-appt-title">Task-Appointments</h2>
+        <span class="panel-dot" aria-hidden="true"></span>
+      </div>
+      <div class="panel-body">
+        <ul class="task-list" id="task-list">
+          <li class="loading-state">Loading appointments…</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Contact -->
+<section class="contact-section" id="contact">
+  <div class="contact-panel">
+    <h2>Get in touch</h2>
+    <p>Questions about an appraisal or your appointment? Send an email — either address reaches us.</p>
+    <div class="contact-links">
+      <a class="contact-card" href="mailto:benocappraiser@gmail.com">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5c9418" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        </span>
+        <span class="contact-meta">
+          <span class="contact-label">Appraisals</span>
+          benocappraiser@gmail.com
+        </span>
+      </a>
+      <a class="contact-card" href="mailto:ben@oclime.com">
+        <span class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5c9418" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        </span>
+        <span class="contact-meta">
+          <span class="contact-label">General</span>
+          ben@oclime.com
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; <span id="js-year"></span> oclime.com — Residential Real Estate Appraisals, Orange County CA
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
